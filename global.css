@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --font-base: 16px;
+    --font-title: 2rem;
+    --font-small: 0.875rem;
+    --line-height: 1.5;
+    --bg: #ffffff;
+    --color: #222222;
+}
+
+
+body {
+    /* background: linear-gradient(to right, rgb(47, 128, 90), rgb(13, 41, 119)); */
+    font-size: var(--font-base);
+    line-height: var(--line-height);
+    color: var(--color);
+    background-color: var(--bg);
+}
+
