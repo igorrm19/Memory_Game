@@ -47,3 +47,7 @@
     width: 150px;
     border-radius: 15%;
 }
+
+.obj{
+    visibility: hidden;
+}
