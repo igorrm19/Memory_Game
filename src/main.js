@@ -153,25 +153,54 @@ function Embaralhar() {
 
 }
 
-function VirarCarta(){
-    obj1.style.visibility = "visible"
-}
 
 buttonEmbaralhar.addEventListener("click", Embaralhar)
 
-card1.addEventListener("click", VirarCarta)
-card2.addEventListener("click", VirarCarta)
-card3.addEventListener("click", VirarCarta)
-card4.addEventListener("click", VirarCarta)
-card5.addEventListener("click", VirarCarta)
-card6.addEventListener("click", VirarCarta)
-card7.addEventListener("click", VirarCarta)
-card8.addEventListener("click", VirarCarta)
-card9.addEventListener("click", VirarCarta)
-card10.addEventListener("click", VirarCarta)
-card11.addEventListener("click", VirarCarta)
-card12.addEventListener("click", VirarCarta)
-card13.addEventListener("click", VirarCarta)
-card14.addEventListener("click", VirarCarta)
-card15.addEventListener("click", VirarCarta)
-card16.addEventListener("click", VirarCarta)
+card1.addEventListener("click", () => {
+   obj1.style.visibility = "visible"
+});
+card2.addEventListener("click", () => {
+    obj2.style.visibility = "visible"
+ });
+card3.addEventListener("click", () => {
+    obj3.style.visibility = "visible"
+ })
+card4.addEventListener("click", () => {
+    obj4.style.visibility = "visible"
+ })
+card5.addEventListener("click", () => {
+    obj5.style.visibility = "visible"
+ })
+card6.addEventListener("click", () => {
+    obj6.style.visibility = "visible"
+ })
+card7.addEventListener("click", () => {
+    obj7.style.visibility = "visible"
+ })
+card8.addEventListener("click", () => {
+    obj8.style.visibility = "visible"
+ })
+card9.addEventListener("click", () => {
+    obj9.style.visibility = "visible"
+ })
+card10.addEventListener("click", () => {
+    obj10.style.visibility = "visible"
+ })
+card11.addEventListener("click", () => {
+    obj11.style.visibility = "visible"
+ })
+card12.addEventListener("click", () => {
+    obj12.style.visibility = "visible"
+ })
+card13.addEventListener("click", () => {
+    obj13.style.visibility = "visible"
+ })
+card14.addEventListener("click", () => {
+    obj14.style.visibility = "visible"
+ })
+card15.addEventListener("click", () => {
+    obj15.style.visibility = "visible"
+ })
+card16.addEventListener("click", () => {
+    obj16.style.visibility = "visible"
+ })
