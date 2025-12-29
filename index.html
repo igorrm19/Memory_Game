@@ -5,72 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./global.css">
-    <link rel="stylesheet" href="./src/style/container.css">
     <!-- <title>MemoryGame</title> -->
 </head>
 
 <body>
     <div class="container">
-        <div class="container-filho">
-            <div class="container-filho-1">
-                <div class="card" id="card-1">
-                    <div class="obj" id="obj1">1</div>
-                </div>
-                <div class="card" id="card-2">
-                    <div class="obj" id="obj2">1</div>
-                </div>
-                <div class="card" id="card-3">
-                    <div class="obj" id="obj3">2</div>
-                </div>
-                <div class="card" id="card-4">
-                    <div class="obj" id="obj4">2</div>
-                </div>
-                <div class="card" id="card-5">
-                    <div class="obj" id="obj5">3</div>
-                </div>
-                <div class="card" id="card-6">
-                    <div class="obj" id="obj6">3</div>
-                </div>
-                <div class="card" id="card-7">
-                    <div class="obj" id="obj7">4</div>
-                </div>
-                <div class="card" id="card-8">
-                    <div class="obj" id="obj8">4</div>
-                </div>
-            </div>
-
-            <div class="container-filho-2">
-                <div class="card" id="card-9">
-                    <div class="obj" id="obj9">5</div>
-                </div>
-                <div class="card" id="card-10">
-                    <div class="obj" id="obj10">5</div>
-                </div>
-                <div class="card" id="card-11">
-                    <div class="obj" id="obj11">6</div>
-                </div>
-                <div class="card" id="card-12">
-                    <div class="obj" id="obj12">6</div>
-                </div>
-                <div class="card" id="card-13">
-                    <div class="obj" id="obj13">7</div>
-                </div>
-                <div class="card" id="card-14">
-                    <div class="obj" id="obj14">7</div>
-                </div>
-                <div class="card" id="card-15">
-                    <div class="obj" id="obj15">8</div>
-                </div>
-                <div class="card" id="card-16">
-                    <div class="obj" id="obj15">8</div>
-                </div>
-            </div>
-        </div>
         <h1>Memory Game</h1>
-        <button id="buttonEmbaralhar" class="button">Embaralhar</button>
+        <div class="game">
+
+        </div>
+        <button id="resetr" class="reset" onclick="window.location.reload()">Resetar</button>
     </div>
 
-    <script src="./src/main.js"></script>
+    <script>
+        const figuras = ["𓃠", "𓃡", "妣", "𓃣", "𓃤", "𓃥", "𓃦", "𓃧", "𓃠", "𓃡", "妣", "𓃣", "𓃤", "𓃥", "𓃦", "𓃧"];
+        let emojis = figuras.sort(() => Math.random() - 0.5);
+        for (let i = 0; i < emojis.length; i++) {
+            let box = document.createElement("div");
+            box.className = "item"
+            box.innerHTML = emojis[i];
+
+            box.onclick = () => {
+                box.classList.add("boxOpen");
+                setTimeout(() => {
+                    if (document.querySelectorAll(".boxOpen").length > 1) {
+                        if (document.querySelectorAll(".boxOpen")[0].innerHTML == document.querySelectorAll(".boxOpen")[1].innerHTML) {
+                            document.querySelectorAll('.boxOpen')[0].classList.add("boxMatch");
+                            document.querySelectorAll('.boxOpen')[1].classList.add("boxMatch");
+
+                            document.querySelectorAll('.boxOpen')[1].classList.remove("boxOpen");
+                            document.querySelectorAll('.boxOpen')[0].classList.remove("boxOpen");
+
+                            if (document.querySelectorAll('.boxMatch').length == emojis.length) {
+                                alert("Parabéns! Você venceu!")
+                            }
+                        } else {
+                            document.querySelectorAll('.boxOpen')[1].classList.remove("boxOpen");
+                            document.querySelectorAll('.boxOpen')[0].classList.remove("boxOpen");
+                        }
+                    }
+                }, 500);
+            }
+
+            document.querySelector(".game").appendChild(box);
+        }
+
+        console.log(emojis)
+
+    </script>
 </body>
 
 </html>
