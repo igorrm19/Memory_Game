@@ -118,3 +118,37 @@ h2 {
 .boxMatch:after {
     transform: rotateY(180deg);
 }
+
+@media screen and (min-width: 275px) and (max-width: 700px),
+(max-width: 440px),
+(min-width: 375px) and (max-width: 500px) {
+    * {
+        box-sizing: content-box;
+    }
+
+    html,
+    body {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .container {
+        padding: 5px 5px;
+        gap: 5px;
+    }
+
+    .game {
+        width: 340px;
+        height: 350px;
+    }
+
+    .item {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .reset {
+        padding: 5px 10px;
+    }
+}
