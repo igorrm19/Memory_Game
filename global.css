@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Press Start 2P', sans-serif;
 }
 
 
@@ -43,6 +45,7 @@ body {
 
 h2 {
     font-size: var(--font-title);
+    font-style: normal;
     color: var(--color);
     text-transform: uppercase;
     letter-spacing: 0.1rem;
@@ -50,6 +53,7 @@ h2 {
 
 .reset {
     padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
     background-color: var(--color);
     color: var(--bg-secondary);
     border-radius: 30px;
