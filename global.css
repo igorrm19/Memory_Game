@@ -126,12 +126,6 @@ h2 {
         box-sizing: content-box;
     }
 
-    html,
-    body {
-        padding: 0px;
-        margin: 0px;
-    }
-
     .container {
         padding: 5px 5px;
         gap: 5px;
