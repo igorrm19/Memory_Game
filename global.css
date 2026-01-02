@@ -76,7 +76,6 @@ h2 {
     height: 440px;
     display: flex;
     justify-content: center;
-    ;
     flex-wrap: wrap;
     gap: 10px;
     transform-style: preserve-3d;
@@ -103,11 +102,11 @@ h2 {
 
 .item::after {
     content: "";
+    transition: 0.55s;
     position: absolute;
     inset: 0;
     border-radius: 10px;
     background-color: var(--bg-secondary);
-    transition: 0.25s;
     transform: rotateY(0deg);
     backface-visibility: hidden;
 }
